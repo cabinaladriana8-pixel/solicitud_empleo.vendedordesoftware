@@ -45,3 +45,7 @@ button{border:0;border-radius:8px;padding:10px 16px;font-weight:900;cursor:point
 .aviso{text-align:center;font-size:9px;color:#617789}
 @media(max-width:850px){body{background:#eef8fc}.hoja{width:100%;min-height:auto;margin:0;padding:12px;border-radius:0}.dos-col,.subidas,.firma-datos{grid-template-columns:1fr}.foto{float:none;margin:8px auto}.foto-espacio{padding-right:0}.opciones,.opciones.tres,.enfermedades{grid-template-columns:1fr 1fr}.consumos{grid-template-columns:1fr}}
 @media print{body{background:white}.hoja{width:210mm;min-height:297mm;margin:0;box-shadow:none;border-radius:0}.acciones,.aviso{display:none}.hoja{page-break-after:always}.hoja:last-child{page-break-after:auto}}
+
+.cabecera h1 small{font-size:12px;letter-spacing:2px;opacity:.95}
+.empresa h2{background:linear-gradient(90deg,#0f766e,#14b8a6,#28a9e0)}
+.empresa .subidas{border-top:3px solid #ffd54a;padding-top:6px}
