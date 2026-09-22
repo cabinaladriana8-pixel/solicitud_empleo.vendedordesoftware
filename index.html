@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitud de Empleo - IMPULSO GS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="solicitudForm" action="enviar.php" method="POST" enctype="multipart/form-data">
+
+<!-- ==================== HOJA 1 ==================== -->
+<div class="hoja">
+  <header class="cabecera">
+    <div>
+      <div class="marca">IMPULSO GS</div>
+      <h1>SOLICITUD DE EMPLEO</h1>
+    </div>
+    <div class="numero-hoja">1 / 4</div>
+  </header>
+
+  <section class="bloque papeleria">
+    <h2>PAPELERÍA REQUERIDA</h2>
+    <div class="subidas">
+      <label>Currículum
+        <input type="file" name="curriculum" accept=".pdf,.jpg,.jpeg,.png" required>
+      </label>
+      <label>Copia de DPI
+        <input type="file" name="dpi" accept=".pdf,.jpg,.jpeg,.png" required>
+      </label>
+      <label>Antecedentes Penales y Policiacos
+        <input type="file" name="antecedentes" accept=".pdf,.jpg,.jpeg,.png" required>
+      </label>
+      <label>Constancia Trabajos Anteriores
+        <input type="file" name="constancia" accept=".pdf,.jpg,.jpeg,.png">
+      </label>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>1. DATOS PERSONALES</h2>
+    <div class="foto">
+      <span>COLOCAR UNA<br>FOTOGRAFÍA</span>
+      <input type="file" name="fotografia" accept="image/*">
+    </div>
+
+    <div class="grid dos-col foto-espacio">
+      <label>1 Nombre<input name="nombre1"></label>
+      <label>2 Nombre<input name="nombre2"></label>
+      <label>1 Apellido<input name="apellido1"></label>
+      <label>2 Apellido<input name="apellido2"></label>
+      <label>Estado Civil<input name="estado_civil"></label>
+      <label>Dirección Exacta<input name="direccion"></label>
+      <label>Teléfono Casa<input name="telefono_casa"></label>
+      <label>Celular<input name="celular"></label>
+      <label>Fecha de Nacimiento<input type="date" name="fecha_nacimiento"></label>
+      <label>Edad<input name="edad"></label>
+      <label>Lugar de Nacimiento<input name="lugar_nacimiento"></label>
+      <label>DPI<input name="numero_dpi"></label>
+      <label>Lugar Emisión<input name="lugar_emision"></label>
+      <label>Nombre y Apellidos del Padre<input name="padre"></label>
+      <label>Ocupación del Padre<input name="ocupacion_padre"></label>
+      <label>Nombre y Apellidos de la Madre<input name="madre"></label>
+      <label>Ocupación de la Madre<input name="ocupacion_madre"></label>
+      <label>Nombre y Apellidos del Cónyuge<input name="conyuge"></label>
+      <label>Ocupación y Lugar de Trabajo del Cónyuge<input name="trabajo_conyuge"></label>
+      <label>No. de Hijos<input name="hijos"></label>
+      <label>¿Ha Prestado Servicio Militar?
+        <select name="servicio_militar"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>Lugar<input name="militar_lugar"></label>
+      <label>Período<input name="militar_periodo"></label>
+      <label>Profesión u Oficio<input name="profesion"></label>
+      <label>¿Posee Vehículo?
+        <select name="posee_vehiculo"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>Marca<input name="vehiculo_marca"></label>
+      <label>Modelo<input name="vehiculo_modelo"></label>
+      <label>¿Tiene Licencia de Conducir?
+        <select name="tiene_licencia"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>Número de Licencia<input name="licencia_numero"></label>
+      <label>Tiempo de Tenerla<input name="licencia_tiempo"></label>
+      <label>Clase<input name="licencia_clase"></label>
+      <label>No. Afiliación IGGS<input name="igss"></label>
+      <label>Banco<input name="banco"></label>
+      <label>Tipo de Cuenta<input name="tipo_cuenta"></label>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== HOJA 2 ==================== -->
+<div class="hoja">
+  <header class="cabecera mini">
+    <div class="marca">IMPULSO GS</div><div class="numero-hoja">2 / 4</div>
+  </header>
+
+  <section class="bloque">
+    <h2>2. ESTUDIOS REALIZADOS</h2>
+    <table>
+      <tr><th>Establecimiento</th><th>Fecha De</th><th>A.</th><th>Título Obtenido</th></tr>
+      <tr><td>Primaria</td><td><input name="primaria_fecha"></td><td><input name="primaria_a"></td><td><input name="primaria_titulo"></td></tr>
+      <tr><td>Básicos</td><td><input name="basicos_fecha"></td><td><input name="basicos_a"></td><td><input name="basicos_titulo"></td></tr>
+      <tr><td>Diversificado</td><td><input name="diversificado_fecha"></td><td><input name="diversificado_a"></td><td><input name="diversificado_titulo"></td></tr>
+      <tr><td>Universitario</td><td><input name="universitario_fecha"></td><td><input name="universitario_a"></td><td><input name="universitario_titulo"></td></tr>
+    </table>
+    <div class="grid dos-col">
+      <label>¿Estudia Actualmente?
+        <select name="estudia_actualmente"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>¿Qué Estudia?<input name="que_estudia"></label>
+      <label>Nombre de la institución<input name="institucion"></label>
+      <label>Horario<input name="horario"></label>
+    </div>
+    <label>Habilidades adquiridas por práctica en el trabajo<textarea name="habilidades"></textarea></label>
+    <p class="pregunta">Marque con una X las actividades en que emplea su tiempo libre:</p>
+    <div class="opciones">
+      <label><input type="checkbox" name="tiempo[]" value="Dibujo"> Dibujo</label>
+      <label><input type="checkbox" name="tiempo[]" value="Pintura"> Pintura</label>
+      <label><input type="checkbox" name="tiempo[]" value="Lectura"> Lectura</label>
+      <label><input type="checkbox" name="tiempo[]" value="TV"> TV</label>
+      <label><input type="checkbox" name="tiempo[]" value="Música"> Música</label>
+      <label><input type="checkbox" name="tiempo[]" value="Viajes"> Viajes</label>
+      <label><input type="checkbox" name="tiempo[]" value="Deporte"> Deporte</label>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>3. INFORMACIÓN SOCIO ECONÓMICA</h2>
+    <div class="grid dos-col">
+      <label>¿Cuántas personas viven en su casa?<input name="personas_casa"></label>
+      <label>Tipo de Vivienda
+        <select name="tipo_vivienda"><option></option><option>Propia</option><option>Alquila</option><option>Vive con su familia</option></select>
+      </label>
+      <label>¿Cuántas personas dependen de su salario?<input name="dependientes"></label>
+      <label>¿Ha sido embargado alguna vez su salario?
+        <select name="embargado"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>¿Por quién?<input name="embargo_quien"></label>
+      <label>¿Por qué cantidad?<input name="embargo_cantidad"></label>
+      <label>¿Por qué motivo?<input name="embargo_motivo"></label>
+      <label>Fecha<input type="date" name="embargo_fecha"></label>
+      <label>¿Obtiene otros ingresos aparte de su sueldo?<input name="otros_ingresos"></label>
+      <label>Cantidad mensual<input name="cantidad_otros"></label>
+      <label>¿Cómo los obtiene?<input name="como_otros"></label>
+      <label>Cuánto gasta mensualmente por vivienda<input name="gasto_vivienda"></label>
+      <label>Alimentos<input name="gasto_alimentos"></label>
+      <label>Educación<input name="gasto_educacion"></label>
+      <label>Vestuario<input name="gasto_vestuario"></label>
+      <label>Recreación<input name="gasto_recreacion"></label>
+      <label>Otros<input name="gasto_otros"></label>
+    </div>
+    <label>Indique sus deudas<textarea name="deudas"></textarea></label>
+    <table>
+      <tr><th>Fecha</th><th>Empresa o Persona</th><th>Cantidad</th><th>Motivo</th></tr>
+      <tr><td><input name="deuda_fecha1"></td><td><input name="deuda_empresa1"></td><td><input name="deuda_cantidad1"></td><td><input name="deuda_motivo1"></td></tr>
+      <tr><td><input name="deuda_fecha2"></td><td><input name="deuda_empresa2"></td><td><input name="deuda_cantidad2"></td><td><input name="deuda_motivo2"></td></tr>
+    </table>
+  </section>
+
+  <section class="bloque">
+    <h2>4. DATOS LABORALES</h2>
+    <div class="grid dos-col">
+      <label>Puesto que solicita<input name="puesto_solicita"></label>
+      <label>¿Cómo se enteró de la Plaza?
+        <select name="enterado"><option></option><option>Anuncio</option><option>Amigo</option><option>Pariente</option></select>
+      </label>
+      <label>Años de Experiencia que tiene en el puesto<input name="experiencia_puesto"></label>
+      <label>Fecha que podría empezar<input type="date" name="fecha_inicio"></label>
+      <label>Sueldo mínimo que aceptaría<input name="sueldo_minimo"></label>
+      <label>¿Trabaja algún pariente suyo en la empresa? Nombre<input name="pariente_nombre"></label>
+      <label>Puesto<input name="pariente_puesto"></label>
+      <label>Grado de Parentesco<input name="parentesco"></label>
+      <label>¿Ha trabajado anteriormente en esta empresa? 
+        <select name="trabajo_empresa"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+      <label>Puesto<input name="puesto_empresa"></label>
+      <label>Nombre del Jefe inmediato<input name="jefe_inmediato"></label>
+      <label>Fecha de Ingreso<input type="date" name="fecha_ingreso"></label>
+      <label>Fecha de Retiro<input type="date" name="fecha_retiro"></label>
+      <label>Motivo<input name="motivo_retiro"></label>
+      <label>¿Ha solicitado trabajo anteriormente en esta empresa?
+        <select name="solicitado_antes"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== HOJA 3 ==================== -->
+<div class="hoja">
+  <header class="cabecera mini">
+    <div class="marca">IMPULSO GS</div><div class="numero-hoja">3 / 4</div>
+  </header>
+
+  <section class="bloque">
+    <h2>5. ÁREA LABORAL</h2>
+    <p class="pregunta">Marque con una X las ocupaciones en las cuales ha tenido experiencia:</p>
+    <div class="opciones tres">
+      <label><input type="checkbox" name="ocupaciones[]" value="Auxiliar de auditoria"> Auxiliar de auditoría</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Auditor Financiero"> Auditor Financiero</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Analista contable"> Analista contable</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Auditor Interno"> Auditor Interno</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Auditor tributario"> Auditor tributario</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Analista de costos"> Analista de costos</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Auditor Externo"> Auditor Externo</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Contador general"> Contador general</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Encargado de pagos"> Encargado de pagos</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Supervisor de Auditoria"> Supervisor de Auditoría</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Auxiliar contable"> Auxiliar contable</label>
+      <label><input type="checkbox" name="ocupaciones[]" value="Encargado de cobros"> Encargado de cobros</label>
+    </div>
+    <h3>HABILIDADES Y COMPETENCIAS</h3>
+    <label>Indique las habilidades, conocimientos y competencias que considera relevantes para el puesto que está aplicando:
+      <textarea name="competencias" class="grande"></textarea>
+    </label>
+  </section>
+
+  <section class="bloque">
+    <h3>ÚLTIMOS TRES EMPLEOS</h3>
+    <p>Anote cronológicamente sus tres últimos empleos, empezando por el actual, y asentando los nombres y direcciones completas de sus patrones y empresas:</p>
+
+    <div class="empleo"><h3>EMPLEO 1</h3>
+      <div class="grid dos-col">
+        <label>Empresa<input name="empleo1_empresa"></label><label>Dirección y Teléfonos Exactos<input name="empleo1_direccion"></label>
+        <label>Puesto desempeñado<input name="empleo1_puesto"></label><label>Descripción de la Actividad<input name="empleo1_actividad"></label>
+        <label>Fecha del Empleo<input name="empleo1_fecha"></label><label>Salario Inicial y Final<input name="empleo1_salario"></label>
+        <label>Motivo de Retiro<input name="empleo1_motivo"></label><label>Jefe Inmediato<input name="empleo1_jefe"></label>
+      </div>
+    </div>
+
+    <div class="empleo"><h3>EMPLEO 2</h3>
+      <div class="grid dos-col">
+        <label>Empresa<input name="empleo2_empresa"></label><label>Dirección y Teléfonos Exactos<input name="empleo2_direccion"></label>
+        <label>Puesto desempeñado<input name="empleo2_puesto"></label><label>Descripción de la Actividad<input name="empleo2_actividad"></label>
+        <label>Fecha del Empleo<input name="empleo2_fecha"></label><label>Salario Inicial y Final<input name="empleo2_salario"></label>
+        <label>Motivo de Retiro<input name="empleo2_motivo"></label><label>Jefe Inmediato<input name="empleo2_jefe"></label>
+      </div>
+    </div>
+
+    <div class="empleo"><h3>EMPLEO 3</h3>
+      <div class="grid dos-col">
+        <label>Empresa<input name="empleo3_empresa"></label><label>Dirección y Teléfonos Exactos<input name="empleo3_direccion"></label>
+        <label>Puesto desempeñado<input name="empleo3_puesto"></label><label>Descripción de la Actividad<input name="empleo3_actividad"></label>
+        <label>Fecha del Empleo<input name="empleo3_fecha"></label><label>Salario Inicial y Final<input name="empleo3_salario"></label>
+        <label>Motivo de Retiro<input name="empleo3_motivo"></label><label>Jefe Inmediato<input name="empleo3_jefe"></label>
+      </div>
+    </div>
+
+    <div class="grid dos-col">
+      <label>¿Desde qué fecha está sin empleo?<input type="date" name="sin_empleo_desde"></label>
+    </div>
+    <label>Actividades desarrolladas durante el desempleo<textarea name="actividades_desempleo"></textarea></label>
+  </section>
+</div>
+
+<!-- ==================== HOJA 4 ==================== -->
+<div class="hoja">
+  <header class="cabecera mini">
+    <div class="marca">IMPULSO GS</div><div class="numero-hoja">4 / 4</div>
+  </header>
+
+  <section class="bloque">
+    <h2>6. INFORMACIÓN FÍSICA Y BIOLÓGICA</h2>
+    <p class="pregunta">Padece o ha padecido de algunas de las siguientes enfermedades? Indique con una X</p>
+    <div class="opciones tres enfermedades">
+      <label><input type="checkbox" name="enfermedades[]" value="Diarrea"> Diarrea</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Nerviosismo"> Nerviosismo</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Pulmonia"> Pulmonía</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Dolores de Cintura"> Dolores de Cintura</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Asma"> Asma</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Desmayos"> Desmayos</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Dolores de Cabeza"> Dolores de Cabeza</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Ataques Epilépticos"> Ataques Epilépticos</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Neumonía"> Neumonía</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Fracturas"> Fracturas</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Catarro Frecuente"> Catarro Frecuente</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Mareos"> Mareos</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Problemas con Riñones"> Problemas con Riñones</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Convulsiones"> Convulsiones</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Tuberculosis"> Tuberculosis</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Presión Alta"> Presión Alta</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Dolor de Huesos"> Dolor de Huesos</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Presión Baja"> Presión Baja</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Hepatitis"> Hepatitis</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Gastritis"> Gastritis</label>
+      <label><input type="checkbox" name="enfermedades[]" value="Ulcera"> Úlcera</label>
+    </div>
+
+    <div class="grid dos-col">
+      <label>¿Ha sido intervenido quirúrgicamente?<select name="operacion"><option></option><option>Sí</option><option>No</option></select></label>
+      <label>Fecha<input type="date" name="operacion_fecha"></label>
+      <label>Tipo de Operación<input name="tipo_operacion"></label>
+    </div>
+
+    <div class="consumos">
+      <div>Consume Drogas?
+        <label class="inline"><input type="radio" name="drogas" value="Mucho"> Mucho</label>
+        <label class="inline"><input type="radio" name="drogas" value="Poco"> Poco</label>
+        <label class="inline"><input type="radio" name="drogas" value="Nada"> Nada</label>
+      </div>
+      <div>Bebidas Alcohólicas?
+        <label class="inline"><input type="radio" name="alcohol" value="Mucho"> Mucho</label>
+        <label class="inline"><input type="radio" name="alcohol" value="Poco"> Poco</label>
+        <label class="inline"><input type="radio" name="alcohol" value="Nada"> Nada</label>
+      </div>
+      <div>Fuma?
+        <label class="inline"><input type="radio" name="fuma" value="Mucho"> Mucho</label>
+        <label class="inline"><input type="radio" name="fuma" value="Poco"> Poco</label>
+        <label class="inline"><input type="radio" name="fuma" value="Nada"> Nada</label>
+      </div>
+    </div>
+
+    <div class="declaracion">
+      Declaro y juro que los datos contenidos en el presente formulario son verdaderos y comprobables, por tanto;
+      autorizo que la empresa realice las investigaciones correspondientes por los medios que considere conveniente,
+      incluyendo visitas domiciliares, entrevistas y verificación de datos mediante entidades dedicadas a ello,
+      como por ejemplo NO LIMITADO (INFORNET). Y en caso de existir alguna información falsa, acepto las
+      responsabilidades que de la misma pudieren surgir.
+    </div>
+
+    <div class="firma-datos">
+      <label>Lugar y Fecha<input name="lugar_fecha"></label>
+      <label>Nombre del Solicitante<input name="nombre_solicitante"></label>
+    </div>
+
+    <div class="firma-box">
+      <h3>FIRMA DEL SOLICITANTE</h3>
+      <canvas id="firma" width="900" height="240"></canvas>
+      <div class="botones-firma">
+        <button type="button" id="limpiarFirma" class="secundario">Limpiar firma</button>
+      </div>
+      <input type="hidden" name="firma_digital" id="firmaDigital">
+    </div>
+  </section>
+
+  <section class="bloque empresa">
+    <h2>USO DE LA EMPRESA</h2>
+    <h3>USO EXCLUSIVO DE RECLUTAMIENTO Y SELECCIÓN</h3>
+    <div class="grid dos-col">
+      <label>Vo.Bo. Nombre<input name="vobo_nombre"></label>
+      <label>Condiciones<input name="condiciones"></label>
+      <label>Salario<input name="salario_empresa"></label>
+      <label>Tiempo Prueba<input name="tiempo_prueba"></label>
+      <label>Fecha de Inicio<input type="date" name="fecha_inicio_empresa"></label>
+      <label>Departamento<input name="departamento_empresa"></label>
+      <label>Puesto<input name="puesto_empresa_final"></label>
+      <label>Confirmar Automáticamente
+        <select name="confirmar"><option></option><option>Sí</option><option>No</option></select>
+      </label>
+    </div>
+    <label>Observaciones<textarea name="observaciones"></textarea></label>
+
+    <div class="subidas final">
+      <h3>CARGAR PAPELERÍA Y DOCUMENTOS</h3>
+      <label>Currículum<input type="file" name="cv_final" accept=".pdf,.jpg,.jpeg,.png"></label>
+      <label>Copia de DPI<input type="file" name="dpi_final" accept=".pdf,.jpg,.jpeg,.png"></label>
+      <label>Antecedentes Penales y Policiacos<input type="file" name="antecedentes_final" accept=".pdf,.jpg,.jpeg,.png"></label>
+      <label>Constancia Trabajos Anteriores<input type="file" name="constancia_final" accept=".pdf,.jpg,.jpeg,.png"></label>
+    </div>
+  </section>
+
+  <div class="acciones">
+    <button type="button" class="secundario" onclick="window.print()">Imprimir / Guardar PDF</button>
+    <button type="submit" class="enviar">ENVIAR SOLICITUD</button>
+  </div>
+  <p class="aviso">La solicitud se enviará al correo de reclutamiento configurado en el servidor.</p>
+</div>
+
+</form>
+<script src="script.js"></script>
+</body>
+</html>

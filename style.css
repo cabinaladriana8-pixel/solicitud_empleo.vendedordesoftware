@@ -1,0 +1,47 @@
+*{box-sizing:border-box}
+:root{--azul:#164e8a;--celeste:#28a9e0;--turquesa:#14b8a6;--amarillo:#ffd54a;--fondo:#eef8fc;--borde:#b7d8e7;--texto:#17324d}
+body{margin:0;background:linear-gradient(135deg,#dff5ff,#f7fbff);font-family:Arial,Helvetica,sans-serif;color:var(--texto);font-size:11px}
+.hoja{width:210mm;min-height:297mm;margin:18px auto;background:white;padding:10mm;position:relative;box-shadow:0 8px 30px #9bb8c8;border-radius:4px;page-break-after:always}
+.hoja:last-child{page-break-after:auto}
+.cabecera{display:flex;align-items:center;justify-content:space-between;border-radius:12px;padding:10px 14px;margin-bottom:10px;background:linear-gradient(100deg,var(--azul),var(--celeste),var(--turquesa));color:white}
+.cabecera h1{margin:2px 0;font-size:21px;letter-spacing:1px}
+.cabecera.mini{padding:8px 12px}.marca{font-weight:900;font-size:16px}.numero-hoja{font-weight:bold;background:#ffffff33;padding:6px 9px;border-radius:8px}
+.bloque{border:1.5px solid var(--borde);border-radius:10px;padding:8px;margin-bottom:9px;background:#fbfeff}
+.bloque h2{font-size:13px;color:white;background:linear-gradient(90deg,var(--azul),var(--celeste));padding:6px 9px;border-radius:7px;margin:0 0 8px}
+.bloque h3{font-size:11px;color:var(--azul);margin:7px 0;border-bottom:2px solid var(--amarillo);padding-bottom:4px}
+.papeleria{background:linear-gradient(120deg,#f0fcff,#fffbea)}
+.subidas{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.subidas label{background:#fff;border:1px dashed #71b9d3;border-radius:7px;padding:6px;font-weight:bold;color:var(--azul)}
+.grid{display:grid;gap:6px}.dos-col{grid-template-columns:1fr 1fr}
+label{font-weight:bold;display:flex;flex-direction:column;gap:3px}
+input,select,textarea{font:inherit;color:#17324d;border:1px solid #9dc7d8;background:#fff;padding:5px;border-radius:5px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--celeste);box-shadow:0 0 0 2px #28a9e022}
+textarea{min-height:55px;resize:vertical}
+.foto{float:right;width:35mm;height:40mm;border:2px dashed var(--celeste);border-radius:8px;background:#f0fbff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--azul);font-weight:bold;margin:0 0 5px 8px}
+.foto input{width:90%;font-size:8px}.foto-espacio{padding-right:38mm}
+table{width:100%;border-collapse:collapse;margin:5px 0}th{background:#d9f3fb;color:var(--azul)}th,td{border:1px solid #9fc5d2;padding:3px}td input{border:0;width:100%;padding:3px}
+.opciones{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:#f1fbfe;padding:7px;border-radius:7px}
+.opciones.tres{grid-template-columns:repeat(3,1fr)}
+.opciones label{font-weight:normal;display:block}.opciones input{accent-color:var(--turquesa)}
+.pregunta{font-weight:bold;color:var(--azul)}
+.empleo{border:1px solid #a8cfdd;border-radius:8px;padding:5px;margin:6px 0;background:#f9fdff}
+.empleo h3{background:#e5f7fb;border-radius:5px;padding:4px}
+.grande{min-height:70px}
+.enfermedades{grid-template-columns:repeat(3,1fr)}
+.consumos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:8px 0;padding:7px;background:#f4fbff;border-radius:7px}
+.inline{display:inline-flex;flex-direction:row;align-items:center;margin-left:5px;font-weight:normal}
+.inline input{accent-color:var(--turquesa)}
+.declaracion{border:1px solid #aac6d1;border-radius:6px;padding:7px;font-size:9px;line-height:1.35;margin:7px 0;background:#fffdf0}
+.firma-datos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.firma-box{border:2px solid var(--azul);border-radius:9px;padding:7px;background:#f6fcff;margin-top:8px}
+canvas{width:100%;height:100px;border:2px solid #345;background:white;border-radius:5px;touch-action:none}
+.botones-firma{text-align:right;margin-top:4px}
+.empresa{border-color:#8ecbd9;background:linear-gradient(135deg,#f5fdff,#fffef1)}
+.final{margin-top:8px}
+.acciones{display:flex;justify-content:center;gap:10px;margin:10px 0}
+button{border:0;border-radius:8px;padding:10px 16px;font-weight:900;cursor:pointer}
+.enviar{background:linear-gradient(90deg,var(--azul),var(--turquesa));color:white;box-shadow:0 4px 12px #147a8a55}
+.secundario{background:var(--amarillo);color:#493900}
+.aviso{text-align:center;font-size:9px;color:#617789}
+@media(max-width:850px){body{background:#eef8fc}.hoja{width:100%;min-height:auto;margin:0;padding:12px;border-radius:0}.dos-col,.subidas,.firma-datos{grid-template-columns:1fr}.foto{float:none;margin:8px auto}.foto-espacio{padding-right:0}.opciones,.opciones.tres,.enfermedades{grid-template-columns:1fr 1fr}.consumos{grid-template-columns:1fr}}
+@media print{body{background:white}.hoja{width:210mm;min-height:297mm;margin:0;box-shadow:none;border-radius:0}.acciones,.aviso{display:none}.hoja{page-break-after:always}.hoja:last-child{page-break-after:auto}}
